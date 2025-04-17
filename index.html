@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebP转PNG工具</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🖼️</text></svg>">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>WebP转PNG工具</h1>
+            <p>简单、快速地将WebP图片转换为PNG格式</p>
+        </header>
+
+        <main>
+            <div class="upload-container" id="upload-area">
+                <div class="upload-content">
+                    <svg class="upload-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48">
+                        <path d="M12 4V16M12 4L8 8M12 4L16 8M20 17V19C20 20.1046 19.1046 21 18 21H6C4.89543 21 4 20.1046 4 19V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                    </svg>
+                    <p>拖放WebP图片到此处或<span class="upload-button">浏览文件</span></p>
+                    <p class="upload-hint">仅支持WebP格式</p>
+                    <input type="file" id="file-input" accept=".webp" hidden>
+                </div>
+            </div>
+
+            <button id="convert-button" class="action-button" disabled>转换为PNG</button>
+
+            <div class="preview-container">
+                <div class="preview-section">
+                    <h3>原始图片 (WebP)</h3>
+                    <div class="preview-box" id="original-preview">
+                        <p class="no-preview">暂无图片</p>
+                    </div>
+                </div>
+                <div class="preview-section">
+                    <h3>转换后图片 (PNG)</h3>
+                    <div class="preview-box" id="converted-preview">
+                        <p class="no-preview">暂无图片</p>
+                    </div>
+                </div>
+            </div>
+
+            <button id="download-button" class="action-button secondary" disabled>下载PNG图片</button>
+        </main>
+
+        <footer>
+            <p>© 2023 WebP转PNG工具 | 纯浏览器端处理，您的图片不会上传到任何服务器</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
